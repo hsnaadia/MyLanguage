@@ -37,8 +37,8 @@ forLoopStatement
     : FOR '(' INT ')' block;
 block : '{' (statement)* '}';
 unlessStatement      
-    : 'unless' '(' condition ')' '{' statement* '}';
-doWhileStatement : 'do' '{' statement* '}' 'while' '(' condition ')';
+    : 'unless' '(' condition ')' block;
+doWhileStatement : 'do' block 'while' '(' condition ')';
 
 
 comment : '//' STRING* ;
